@@ -4,4 +4,4 @@
 
 ### How to use?
 
-Idk xd
+npm start
