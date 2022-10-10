@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Kireev I.I. (thepoli.b@gmail.com)",
+  "author": "Kireev I.I.",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.1.0",
     "puppeteer": "^18.0.5"
   }
 }

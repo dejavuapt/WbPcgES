@@ -63,7 +63,7 @@ const scrapper = {
         });
 
         var saveJson = JSON.stringify(data_phone, null, " ");
-        fs.writeFile('data.json', saveJson, (error) => { if (error) throw error;});
+        fs.writeFile('/data/data.json', saveJson, (error) => { if (error) throw error;});
 
         console.log({reviews});
     }
