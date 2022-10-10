@@ -1,19 +1,17 @@
 # **WbPcgES**
 📦 [Project within the university] Parsing reviews from electronic equipment sites.
 
----
+
 ## **Идея проекта:**
 
 скоро напишу
 
----
 
 ## **Инструменты:**
-<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="nodejs"/>
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="js"/>
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="nodejs"/> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="js"/>
 
 <a href="https://pptr.dev/">
-<img src="https://img.shields.io/badge/Puppeteer-fff?style=for-the-badge&logo=Puppeteer&logoColor=3CB371" alt="puppeteer"/>
+<img src="https://img.shields.io/badge/Puppeteer-F0FFF0?style=for-the-badge&logo=Puppeteer&logoColor=3CB371" alt="puppeteer"/>
 </a>
 <a href="https://cheerio.js.org/index.html">
 <img src="https://img.shields.io/badge/cheerio-F5F5DC?style=for-the-badge&logo=cheerio&logoColor=3CB371" alt="nodejs"/>
@@ -21,8 +19,6 @@
 
 - Puppeteer - для парсинга html кода с сайтов
 - Cheerio - для поиска и получения данных с html 
-
----
 
 ## **Как использовать?**
 
