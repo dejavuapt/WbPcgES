@@ -1,16 +1,14 @@
-# WbPcgES
+# **WbPcgES**
 📦 [Project within the university] Parsing reviews from electronic equipment sites.
 
 ---
-## Идея проекта:
+## **Идея проекта:**
 
 скоро напишу
 
 ---
 
-<h2>
-Tools:
-</h2>
+## **Инструменты:**
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="nodejs"/>
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="js"/>
 
@@ -26,7 +24,7 @@ Tools:
 
 ---
 
-### How to use?
+## **Как использовать?**
 
 v0.35: Парсинг общей информации о смартфонах с сайта Citilink. Изменять кол-во страниц в самом коде.
 
