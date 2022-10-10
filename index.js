@@ -26,10 +26,19 @@ const pages = 1;
             const $ = cheerio.load(pageContent)
             const mobileItems = []
 
+            // я создаю базу данных всех телефонов и объеденяю отзывы в одно. После обучаю на этих отзывах модель и тестовые это ещё отзывы но уже по телефонам
+
             $('.ProductCardHorizontal').each((i, header) => {
                 const title = $(header).attr('data-params')
-                const count_opinions = $(header).attr('data-opinion')
                 var parsTitle = JSON.parse(title)
+
+                const count_opinions = $(header).find('.ProductCardHorizontal__icons').children().last().find('.ProductCardHorizontal__count').text().trim()
+                const common_rating = $(header).find('.ProductCardHorizontal__icons').children().first().find('.ProductCardHorizontal__count').text().trim()
+
+                var url_op = null
+                if(count_opinions != 0){
+                    url_op = $(header).find('.ProductCardHorizontal__rating-block').children().first().attr('href')
+                }
 
                 mobileItems.push({
                     categoryid: parsTitle['categoryId'],
@@ -37,14 +46,10 @@ const pages = 1;
                     copy_title: slugify(parsTitle['shortName']),
                     brand: parsTitle['brandName'],
                     price: parsTitle['price'],
-                    rating: 0,
+                    rating: common_rating,
                     opinions_size: count_opinions,
-                    url_opinions: chd_title.children().first().attr('href')
+                    opinions_url: url_op
                 })
-            })
-            $('.ProductCardHorizontal__rating-block').each((i, header) => {
-                const url_op = $(header).children().first().attr('href')
-                
             })
             console.log(mobileItems)
         }
