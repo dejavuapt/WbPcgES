@@ -27,7 +27,6 @@ const pages = 1;
             var saveJson = JSON.stringify(mobiles, null, " ");
             fs.writeFile('./data/data.json', saveJson, (error) => { if (error) throw error;});
 
-            
         }
     }
     catch (err){

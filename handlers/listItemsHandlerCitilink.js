@@ -10,9 +10,9 @@ export default async function listItemsHandlerCitilink(data){
             console.log(chalk.green('Getting data from: ') + chalk.green.bold(initialData.opinions_url));
             const detailContent = await getPageContent(initialData.opinions_url)
             const $ = cheerio.load(detailContent)
-            //document.querySelector("#opinion-list > div:nth-child(1) > div.OpinionText")
-            //document.querySelector("#opinion-list > div:nth-child(1) > div.OpinionText > p:nth-child(2)")
-            // const opinionItems = []
+            
+            const opinionItems = []
+            
             $('.Opinion').each((i, opinion) =>{
                 const name_reviewer = $(opinion).children().first().find('.js--UserAvatar__name').text().trim()
                 const rate_reviewer = $(opinion).children().first().find('.UserAvatar__number').text().trim()
@@ -21,8 +21,10 @@ export default async function listItemsHandlerCitilink(data){
                     commenting.push($(v).text().trim().split('\n').join(' '))
                 })
 
-                initialData.reviews = {name_reviewer, rate_reviewer, commenting}
+                opinionItems.push({name_reviewer, rate_reviewer, commenting})
             })
+
+            initialData.reviews = opinionItems
         }
     }
     catch (err){
