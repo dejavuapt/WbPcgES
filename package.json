@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "wbpcges",
   "version": "0.0.1",
   "description": "Project within the university. Parsing reviews from electronic equipment sites.",
@@ -15,7 +16,8 @@
     "@babel/node": "^7.19.1",
     "@babel/preset-env": "^7.19.3",
     "chalk": "^5.1.0",
-    "cherio": "^1.0.0-rc.2",
-    "puppeteer": "^18.0.5"
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^18.0.5",
+    "transliteration": "^2.3.5"
   }
 }

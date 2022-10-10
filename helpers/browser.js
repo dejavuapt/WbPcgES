@@ -1,14 +1,11 @@
+const { default: chalk } = require('chalk');
 const puppeteer = require('puppeteer');
 
-async function startBrowser() {
+async function startBrowser(options) {
     let browser;
     try{
-        console.log('opening browser.......');
-        browser = await puppeteer.launch({
-            headless: true,
-            args: ['--disable-setuid-sandbox'],
-            ignoreHTTPSErrors: true,
-        });
+        console.log(chalk.green('opening browser.......'));
+        browser = await puppeteer.launch(options);
     }
     catch(err){
         console.log(err);
