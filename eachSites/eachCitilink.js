@@ -27,7 +27,8 @@ export function eachForCitilinkSite(pageContentCitilink) {
             price: parsTitle['price'],
             rating: common_rating,
             opinions_size: count_opinions,
-            opinions_url: url_op
+            opinions_url: url_op,
+            reviews: null
         })
     })
 
