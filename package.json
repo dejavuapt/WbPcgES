@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "wbpcges",
-  "version": "0.0.1",
+  "version": "v0.35",
   "description": "Project within the university. Parsing reviews from electronic equipment sites.",
   "main": "index.js",
   "scripts": {

@@ -21,7 +21,7 @@ const pages = 1;
             const pageContent = await getPageContent(url)
             const mobiles = eachForCitilinkSite(pageContent)
             //console.log(mobiles)
-
+            
             var saveJson = JSON.stringify(mobiles, null, " ");
             fs.writeFile('./data/data.json', saveJson, (error) => { if (error) throw error;});
         }
