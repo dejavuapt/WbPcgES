@@ -1,4 +1,6 @@
 # **WbPcgES**
+![Version](https://img.shields.io/badge/version-0.35-3CB371)
+
 📦 [Project within the university] Parsing reviews from electronic equipment sites.
 
 
