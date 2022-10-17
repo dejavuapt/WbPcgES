@@ -1,12 +1,12 @@
 {
   "type": "module",
   "name": "wbpcges",
-  "version": "v0.37",
+  "version": "v0.4",
   "description": "Project within the university. Parsing reviews from electronic equipment sites.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node index.js"
+    "scrap": "babel-node index.js"
   },
   "author": "Kireev I.I.",
   "license": "ISC",

@@ -1,6 +1,8 @@
 import cheerio from 'cheerio';
 import chalk from 'chalk';
 
+
+import { saveData } from '../handlers/saver.js'
 import { getPageContent } from '../helpers/puppeteer.js';
 
 export default async function listItemsHandlerCitilink(data){
@@ -25,7 +27,9 @@ export default async function listItemsHandlerCitilink(data){
             })
 
             initialData.reviews = opinionItems
-            console.log(initialData)
+            
+            await saveData(initialData)
+
         }
     }
     catch (err){
@@ -33,6 +37,3 @@ export default async function listItemsHandlerCitilink(data){
     }
 }
 
-async function saveData(data){
-
-}

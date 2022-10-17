@@ -28,7 +28,9 @@ export async function getPageContent(url, button){
             try {
                 console.log("open more...")
                 await page.click('#opinion-list > div.Comments__more.show_more > button')
-                await page.waitForTimeout(3000)
+                console.log("wait 7s")
+                await page.waitForTimeout(7000)
+                //await page.waitForNetworkIdle({waitUntil: 'networkidle2'})
             }  
             catch(err){
                 console.log(chalk.red(err));

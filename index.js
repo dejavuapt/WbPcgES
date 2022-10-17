@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import * as fs from 'fs';
+
 
 // sites 
 import { eachForCitilinkSite } from './eachSites/eachCitilink.js';
@@ -12,7 +12,9 @@ import { arrayFromLenghts } from './helpers/common.js';
 import { getPageContent } from './helpers/puppeteer.js';
 
 const SITE = 'https://www.citilink.ru/catalog/smartfony/?p='
-const pages = 1;
+const pages = process.argv[2] || 1
+
+console.log(pages);
 
 (async function main(){
     try{
@@ -22,10 +24,6 @@ const pages = 1;
             const pageContent = await getPageContent(url)
             const mobiles = eachForCitilinkSite(pageContent)
             await listItemsHandlerCitilink(mobiles)
-            //console.log(mobiles)
-            //var saveJson = JSON.stringify(mobiles, null, " ");
-            //fs.writeFile('./data/data.json', saveJson, (error) => { if (error) throw error;});
-
         }
     }
     catch (err){
