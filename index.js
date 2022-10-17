@@ -23,9 +23,8 @@ const pages = 1;
             const mobiles = eachForCitilinkSite(pageContent)
             await listItemsHandlerCitilink(mobiles)
             //console.log(mobiles)
-            
-            var saveJson = JSON.stringify(mobiles, null, " ");
-            fs.writeFile('./data/data.json', saveJson, (error) => { if (error) throw error;});
+            //var saveJson = JSON.stringify(mobiles, null, " ");
+            //fs.writeFile('./data/data.json', saveJson, (error) => { if (error) throw error;});
 
         }
     }

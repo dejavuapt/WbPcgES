@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import { slugify } from 'transliteration';
 
 export function eachForCitilinkSite(pageContentCitilink) {
-    const $ = cheerio.load(pageContentCitilink)
+    const $ = cheerio.load(pageContentCitilink, false)
     const mobileItems = []
 
     // я создаю базу данных всех телефонов и объеденяю отзывы в одно. После обучаю на этих отзывах модель и тестовые это ещё отзывы но уже по телефонам
@@ -27,7 +27,7 @@ export function eachForCitilinkSite(pageContentCitilink) {
             price: parsTitle['price'],
             rating: common_rating,
             opinions_size: count_opinions,
-            opinions_url: url_op,
+            opinions_url: url_op + "#Close",
             reviews: null
         })
     })

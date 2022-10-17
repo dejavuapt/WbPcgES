@@ -8,7 +8,7 @@ export default async function listItemsHandlerCitilink(data){
         for(const initialData of data){
             if(initialData.opinions_url == null){ continue; }
             console.log(chalk.green('Getting data from: ') + chalk.green.bold(initialData.opinions_url));
-            const detailContent = await getPageContent(initialData.opinions_url)
+            const detailContent = await getPageContent(initialData.opinions_url, true)
             const $ = cheerio.load(detailContent)
             
             const opinionItems = []
@@ -25,6 +25,7 @@ export default async function listItemsHandlerCitilink(data){
             })
 
             initialData.reviews = opinionItems
+            console.log(initialData)
         }
     }
     catch (err){
