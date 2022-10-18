@@ -17,6 +17,7 @@ export function eachForCitilinkSite(pageContentCitilink) {
         var url_op = null
         if (count_opinions != 0) {
             url_op = $(header).find('.ProductCardHorizontal__rating-block').children().first().attr('href')
+            url_op = url_op + "#Close"
         }
 
         mobileItems.push({
@@ -27,7 +28,7 @@ export function eachForCitilinkSite(pageContentCitilink) {
             price: parsTitle['price'],
             rating: common_rating,
             opinions_size: count_opinions,
-            opinions_url: url_op + "#Close",
+            opinions_url: url_op,
             reviews: null
         })
     })

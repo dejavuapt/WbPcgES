@@ -10,7 +10,7 @@ export const LAUNCH_PUPPETEER_OPTS = {
         '--disable-gpu'
     ],
     product: 'chrome',
-    headless: true,
+    headless: false,
 };
 
 export const PAGE_PUPPETEER_OPTS = {
@@ -28,12 +28,16 @@ export async function getPageContent(url, button){
             try {
                 console.log("open more...")
                 await page.click('#opinion-list > div.Comments__more.show_more > button')
-                console.log("wait 7s")
-                await page.waitForTimeout(7000)
-                //await page.waitForNetworkIdle({waitUntil: 'networkidle2'})
+                await page.click('#opinion-list > div.Comments__more.show_more > button')
+                
+                //await page.waitForNetworkIdle({waitUntil: 'networkidle0'})
             }  
             catch(err){
                 console.log(chalk.red(err));
+            }
+            finally{
+                console.log("wait 6s")
+                await page.waitForTimeout(6000)
             }
         }
         const content = await page.content()
