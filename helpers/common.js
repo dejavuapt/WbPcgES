@@ -1,3 +1,3 @@
 export function arrayFromLenghts(number) {
-    return Array.from(new Array(number).keys()).map(k => k+1)
+    return Array.from({length: number}, (_, i) => i + 1)
 }
